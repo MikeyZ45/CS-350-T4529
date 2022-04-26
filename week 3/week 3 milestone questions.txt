@@ -1,0 +1,12 @@
+After working through this process, you will need to address the following questions:
+• How does the macro UART_DATA_BINARY impact the UART?
+	- this will change if the data is processed or unprocessed during uart.
+• How does the macro UART_RETURN_FULL impact the UART?
+	- Unblock/callback when buffer is full.
+• What driver call would you use to write 10 characters out of the UART?
+	- UART_read(uart, &input, 10);
+• What is the driver call to turn off LED 0?
+	-GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
+
+• What is the UART baud rate? 
+	- 115200 is the baud rate for our project which means the serial port we are using should be able to hand max 115200 bits per second.

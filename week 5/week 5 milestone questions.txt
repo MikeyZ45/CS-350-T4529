@@ -1,0 +1,14 @@
+• What is the purpose of the timerCallback() function?
+	- The user-defined callback routine that actually gets called periodically.
+
+• What does period mean in this context?
+	- the time taken to pause in milliseconds
+
+• How does the Timer_CONTINUOUS_CALLBACK parameter impact the driver?
+	 - Is a non-blocking call. After Timer_start() is called, the calling thread will continue execution. When the timer interrupt is triggered, the specified callback function will be called. The timer is automatically restarted and will continue to periodically generate interrupts until Timer_stop() is called.
+
+• What is gpioButtonFxn0() used for?
+	- this is used to recieve the button press call and process the code withing the function
+
+• What is the purpose of GPIO_CFG_IN_INT_FALLING? 
+	- to make a system interrupt on the HIGH to LOW change in frequency.

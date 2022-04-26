@@ -1,0 +1,36 @@
+ 1. After working through this process, you will need to address the following questions:
+• What does pwmled2 set the PWM period to?
+	- Task periodically increments the PWM duty for the on board LED.
+
+• Which PWM_xxx() function sets the PWM period?
+	- PWM_setPeriod and PWM_setDutyAndPeriod
+
+• Which PWM_xxx() function sets the PWM duty cycle?
+	- PWM_setDuty and PWM_setDutyAndPeriod
+
+• What is the purpose of the while(1) loop in pwmled2?
+	- this creates an infinite loop so it will only be escaped manually.
+
+• What is the purpose of usleep() in the while(1) loop?
+	- this pauses the program for a set amount of time to allow processing to happen before starting the loop over.
+
+
+2. Now it is time to modify pwmled2. Your code will need to accomplish the following:
+• Set duty for PWM1 to 90%.
+• Set duty for PWM2 to 10%.
+• Set the sleep(1) function so it sleeps for 1 second.
+• Set duty for PWM1 to 0%.
+• Set duty for PWM2 to 90%.
+• Create your code in a loop. 
+
+while(1){
+  	PWM_setDuty(pwm1, 229);
+
+        PWM_setDuty(pwm2, 25);
+
+        sleep(1);
+
+        PWM_setDuty(pwm1, 0);
+
+        PWM_setDuty(pwm2, 229);
+};
